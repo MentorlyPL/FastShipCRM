@@ -1,0 +1,27 @@
+{
+  "name": "fastshipcrm",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/MentorlyPL/FastShipCRM#readme",
+  "bugs": {
+    "url": "https://github.com/MentorlyPL/FastShipCRM/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MentorlyPL/FastShipCRM.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "axios": "^1.13.2",
+    "bootstrap": "^5.3.8",
+    "json-server": "^1.0.0-beta.3",
+    "typescript": "^5.9.3"
+  }
+}

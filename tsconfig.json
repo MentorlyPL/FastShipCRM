@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2024", // Wersja JavaScript do której będzie kompilowany kod
+    "module": "esnext", // System modułów
+    "rootDir": "./", // Katalog główny projektu
+    "outDir": "dist", // Pliki .js będą generowane w katalogu 'dist'
+    "strict": true, // Włączenie ścisłego sprawdzania typów
+    "isolatedModules": true // Wymuś traktowanie każdego pliku jako modułu
+  },
+  "include": ["**/*.ts"], // Uwzględnij wszystkie pliki .ts w projekcie
+  "exclude": ["node_modules"] // Wyklucz katalog node_modules
+}
