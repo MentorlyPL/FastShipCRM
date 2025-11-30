@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastShip CRM - Lista paczek</title>
+    <link rel="stylesheet" href="./shared/sharedStyles.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="p-4">
+    <nav class="mb-4">
+      <a href="./index.html" class="me-3">Lista paczek</a>
+      <a href="./src/formpage/index.html">Dodaj paczkę</a>
+    </nav>
+
+    <h1>FastShip CRM</h1>
+    <p>Witamy w systemie zarządzania paczkami FastShip.</p>
+
+    <div class="container mt-4">
+      <h2 class="mb-3">Lista paczek</h2>
+
+      <div id="loader" style="display: none">
+        <div class="spinner-border" role="status"></div>
+        <span class="ms-2">Ładowanie...</span>
+      </div>
+
+      <div
+        id="error-box"
+        class="alert alert-danger"
+        style="display: none"
+      ></div>
+
+      <table class="table table-striped table-hover mt-3">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nadawca</th>
+            <th>Odbiorca</th>
+            <th>Status</th>
+            <th>Data nadania</th>
+            <th>Akcje</th>
+          </tr>
+        </thead>
+        <tbody id="package-table-body"></tbody>
+      </table>
+    </div>
+
+    <script src="./src/index.js" type="module"></script>
+    <script
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+  </body>
+</html>

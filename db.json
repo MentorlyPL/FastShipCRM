@@ -1,0 +1,58 @@
+{
+  "packages": [
+    {
+      "id": "fs-1a2b3c",
+      "sender": "Jan Kowalski",
+      "receiver": "Anna Nowak",
+      "priority": "standard",
+      "weight": 2.5,
+      "status": "created",
+      "createdAt": "2024-11-01T08:30:00Z"
+    },
+    {
+      "id": "fs-3c4d5e",
+      "sender": "Kurier Sp. z o.o.",
+      "receiver": "Marek Zieliński",
+      "priority": "standard",
+      "weight": 12,
+      "status": "delivered",
+      "createdAt": "2024-10-28T14:00:00Z"
+    },
+    {
+      "id": "fs-4d5e6f",
+      "sender": "Studio Foto",
+      "receiver": "Janina B.",
+      "priority": "express",
+      "weight": 1.1,
+      "status": "created",
+      "createdAt": "2024-11-05T12:00:00Z"
+    },
+    {
+      "id": "fs-5e6f7g",
+      "sender": "Magazyn PL",
+      "receiver": "Sklep XYZ",
+      "priority": "standard",
+      "weight": 25,
+      "status": "in-transit",
+      "createdAt": "2024-11-03T10:20:00Z"
+    },
+    {
+      "id": "fs-6f7g8h",
+      "sender": "Janina Transport",
+      "receiver": "Biuro Q",
+      "priority": "express",
+      "weight": 4.8,
+      "status": "created",
+      "createdAt": "2024-11-04T07:45:00Z"
+    },
+    {
+      "id": "fs-7g8h9i",
+      "sender": "Firma Mega",
+      "receiver": "Klient Testowy",
+      "priority": "standard",
+      "weight": 0.8,
+      "status": "canceled",
+      "createdAt": "2024-10-20T11:12:00Z"
+    }
+  ]
+}
