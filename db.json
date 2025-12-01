@@ -1,58 +1,68 @@
 {
   "packages": [
     {
-      "id": "fs-1a2b3c",
-      "sender": "Jan Kowalski",
-      "receiver": "Anna Nowak",
-      "priority": "standard",
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "priority": "express",
       "weight": 2.5,
-      "status": "created",
-      "createdAt": "2024-11-01T08:30:00Z"
+      "status": "inTransit",
+      "createdAt": "2025-01-01T10:00:00.000Z",
+      "sender": {
+        "name": "Jan Kowalski",
+        "address": {
+          "street": "Długa 10",
+          "city": "Warszawa",
+          "zipCode": "00-001",
+          "country": "Polska"
+        },
+        "contact": {
+          "email": "jan@example.com"
+        }
+      },
+      "receiver": {
+        "name": "Adam Nowak",
+        "address": {
+          "street": "Krótka 5",
+          "city": "Kraków",
+          "zipCode": "30-001",
+          "country": "Polska"
+        },
+        "contact": {
+          "phone": "+48555111222"
+        }
+      }
     },
     {
-      "id": "fs-3c4d5e",
-      "sender": "Kurier Sp. z o.o.",
-      "receiver": "Marek Zieliński",
+      "id": "a4a06959-dd40-429a-8b50-a57be53c7c5a",
+      "sender": {
+        "name": "Karol",
+        "address": {
+          "street": "Ziołowa 18",
+          "city": "Włocławek",
+          "zipCode": "87-800",
+          "country": "Polska"
+        },
+        "contact": {
+          "email": "",
+          "phone": "9999999999"
+        }
+      },
+      "receiver": {
+        "name": "A B",
+        "address": {
+          "street": "ZZZZ",
+          "city": "Aa",
+          "zipCode": "11-111",
+          "country": "Polska"
+        },
+        "contact": {
+          "email": "asada@wp.pl",
+          "phone": ""
+        }
+      },
       "priority": "standard",
-      "weight": 12,
-      "status": "delivered",
-      "createdAt": "2024-10-28T14:00:00Z"
-    },
-    {
-      "id": "fs-4d5e6f",
-      "sender": "Studio Foto",
-      "receiver": "Janina B.",
-      "priority": "express",
-      "weight": 1.1,
+      "weight": 33,
       "status": "created",
-      "createdAt": "2024-11-05T12:00:00Z"
-    },
-    {
-      "id": "fs-5e6f7g",
-      "sender": "Magazyn PL",
-      "receiver": "Sklep XYZ",
-      "priority": "standard",
-      "weight": 25,
-      "status": "in-transit",
-      "createdAt": "2024-11-03T10:20:00Z"
-    },
-    {
-      "id": "fs-6f7g8h",
-      "sender": "Janina Transport",
-      "receiver": "Biuro Q",
-      "priority": "express",
-      "weight": 4.8,
-      "status": "created",
-      "createdAt": "2024-11-04T07:45:00Z"
-    },
-    {
-      "id": "fs-7g8h9i",
-      "sender": "Firma Mega",
-      "receiver": "Klient Testowy",
-      "priority": "standard",
-      "weight": 0.8,
-      "status": "canceled",
-      "createdAt": "2024-10-20T11:12:00Z"
+      "createdAt": "2025-12-01T10:14:14.026Z"
     }
   ]
 }

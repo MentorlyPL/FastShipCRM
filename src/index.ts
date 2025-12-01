@@ -1,5 +1,5 @@
 import axios from "axios"
-import { Package } from "./shared/index.js"
+import { Package, PersonData } from "./shared/index.js"
 
 const API_BASE = "http://localhost:8080"
 
@@ -11,6 +11,10 @@ const loader = document.querySelector("#loader") as HTMLDivElement | null
 
 if (!tableBody || !errorBox || !loader) {
   console.error("Brakuje elementów DOM (tableBody/errorBox/loader)")
+}
+
+function personToString(sender: PersonData): string {
+  return `${sender.name}, ${sender.address.street}, \n ${sender.address.zipCode} ${sender.address.city}`
 }
 
 async function loadPackages() {
@@ -26,24 +30,25 @@ async function loadPackages() {
 
     if (tableBody && packages) {
       tableBody.innerHTML = ""
-      packages.forEach((p) => {
+      packages.forEach((pkg) => {
         const row = document.createElement("tr")
         row.innerHTML = `
-          <td>${p.id} xddd</td>
-          <td>${p.sender}</td>
-          <td>${p.receiver}</td>
-          <td>${p.priority}</td>
-          <td>${p.weight}</td>
-          <td>${new Date(p.createdAt).toLocaleString()}</td>
+          <td>${pkg.id}</td>
+          <td>${personToString(pkg.sender)}</td>
+          <td>${personToString(pkg.receiver)}</td>
+          <td>${pkg.priority}</td>
+          <td>${pkg.weight} kg</td>
+          <td>${pkg.status}</td>
+          <td>${new Date(pkg.createdAt).toLocaleString()}</td>
           <td>
             <a href="../detailsPage/index.html?id=${encodeURIComponent(
-              p.id
+              pkg.id
             )}" class="btn btn-sm btn-primary me-1">Szczegóły</a>
             <button class="btn btn-sm btn-secondary me-1 edit-btn" data-id="${
-              p.id
+              pkg.id
             }">Edytuj</button>
             <button class="btn btn-sm btn-danger delete-btn" data-id="${
-              p.id
+              pkg.id
             }">Usuń</button>
           </td>
         `
