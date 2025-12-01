@@ -1,13 +1,13 @@
 import axios from "axios"
-import { Package, PersonData } from "./shared/index.js"
-
-const API_BASE = "http://localhost:8080"
+import { Package, PersonData, API_BASE } from "./shared/index.js"
+import { openEditModal } from "./shared/editModal/editModal.js"
 
 const tableBody = document.querySelector(
   "#package-table-body"
 ) as HTMLTableSectionElement | null
 const errorBox = document.querySelector("#error-box") as HTMLDivElement | null
 const loader = document.querySelector("#loader") as HTMLDivElement | null
+let loadedPackages: Package[]
 
 if (!tableBody || !errorBox || !loader) {
   console.error("Brakuje elementów DOM (tableBody/errorBox/loader)")
@@ -26,11 +26,11 @@ async function loadPackages() {
 
   try {
     const response = await axios.get<Package[]>(`${API_BASE}/packages`)
-    const packages = response.data
+    loadedPackages = response.data
 
-    if (tableBody && packages) {
+    if (tableBody && loadedPackages) {
       tableBody.innerHTML = ""
-      packages.forEach((pkg) => {
+      loadedPackages.forEach((pkg) => {
         const row = document.createElement("tr")
         row.innerHTML = `
           <td>${pkg.id}</td>
@@ -41,7 +41,7 @@ async function loadPackages() {
           <td>${pkg.status}</td>
           <td>${new Date(pkg.createdAt).toLocaleString()}</td>
           <td>
-            <a href="../detailsPage/index.html?id=${encodeURIComponent(
+            <a href="/src/detailsPage/index.html?id=${encodeURIComponent(
               pkg.id
             )}" class="btn btn-sm btn-primary me-1">Szczegóły</a>
             <button class="btn btn-sm btn-secondary me-1 edit-btn" data-id="${
@@ -76,11 +76,10 @@ async function loadPackages() {
         btn.addEventListener("click", (ev) => {
           const id = (ev.currentTarget as HTMLElement).getAttribute("data-id")
           if (!id) return
-          // tutaj powinieneś otworzyć modal edycji — ten modal zrobimy w kolejnym tickecie
-          // tymczasowo przekierowujemy do detailsPage z parametrem edit=true
-          window.location.href = `../detailsPage/index.html?id=${encodeURIComponent(
-            id
-          )}&edit=true`
+          const pkg = loadedPackages.find((p) => p.id === id)
+          if (!pkg) return
+
+          openEditModal(pkg, loadPackages)
         })
       })
     }
@@ -96,5 +95,4 @@ async function loadPackages() {
   }
 }
 
-// uruchomienie
 loadPackages()

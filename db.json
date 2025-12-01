@@ -3,13 +3,13 @@
     {
       "id": "123e4567-e89b-12d3-a456-426614174000",
       "priority": "express",
-      "weight": 2.5,
+      "weight": 2.6,
       "status": "inTransit",
       "createdAt": "2025-01-01T10:00:00.000Z",
       "sender": {
         "name": "Jan Kowalski",
         "address": {
-          "street": "Długa 10",
+          "street": "Długa 16",
           "city": "Warszawa",
           "zipCode": "00-001",
           "country": "Polska"
@@ -42,7 +42,6 @@
           "country": "Polska"
         },
         "contact": {
-          "email": "",
           "phone": "9999999999"
         }
       },
@@ -55,14 +54,44 @@
           "country": "Polska"
         },
         "contact": {
-          "email": "asada@wp.pl",
-          "phone": ""
+          "email": "asada@wp.pl"
         }
       },
-      "priority": "standard",
+      "priority": "express",
       "weight": 33,
-      "status": "created",
+      "status": "collected",
       "createdAt": "2025-12-01T10:14:14.026Z"
+    },
+    {
+      "id": "1b2c3d4e",
+      "sender": {
+        "name": "Jan Kowalski",
+        "address": {
+          "street": "Polna 12",
+          "city": "Warszawa",
+          "zipCode": "00-001",
+          "country": "Polska"
+        },
+        "contact": {
+          "email": "jan@example.com"
+        }
+      },
+      "receiver": {
+        "name": "Anna Nowak",
+        "address": {
+          "street": "Zielona 33",
+          "city": "Kraków",
+          "zipCode": "30-001",
+          "country": "Polska"
+        },
+        "contact": {
+          "phone": "+48 555 333 222"
+        }
+      },
+      "priority": "express",
+      "weight": 2.5,
+      "status": "created",
+      "createdAt": "2024-05-01T12:00:00.000Z"
     }
   ]
 }

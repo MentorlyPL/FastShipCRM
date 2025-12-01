@@ -1,7 +1,11 @@
 import axios from "axios"
-import { Package, Priority, Statuses, PersonData } from "../shared/index.js"
-
-const API_BASE = "http://localhost:8080"
+import {
+  Package,
+  Priority,
+  Statuses,
+  PersonData,
+  API_BASE
+} from "../shared/index.js"
 
 const form = document.querySelector("#package-form") as HTMLFormElement
 const errorBox = document.querySelector("#error-box") as HTMLDivElement

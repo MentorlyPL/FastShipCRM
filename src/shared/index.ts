@@ -1,3 +1,5 @@
+export const API_BASE = "http://localhost:8080"
+
 export enum Priority {
   standard = "standard",
   express = "express"

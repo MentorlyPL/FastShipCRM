@@ -1,0 +1,12 @@
+#detailsContainer h4 {
+  margin-top: 20px;
+}
+
+.details-block {
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.details-label {
+  font-weight: bold;
+}

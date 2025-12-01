@@ -7,6 +7,10 @@
 
     <link rel="stylesheet" href="../shared/sharedStyles.css" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
   </head>
   <body class="p-4">
     <nav class="mb-4">
@@ -16,10 +20,18 @@
 
     <h1>Szczegóły paczki</h1>
 
-    <div id="detailsContainer" class="mt-3">
-      <!-- szczegóły paczki powstają w kolejnych ticketach -->
+    <div class="container mt-4">
+      <button class="btn btn-secondary mb-3" id="backBtn">← Powrót</button>
+      <h2 class="mb-4">Szczegóły paczki</h2>
+
+      <div id="detailsContainer" class="card p-4 shadow-sm">
+        Ładowanie danych...
+      </div>
+
+      <button class="btn btn-primary mt-4" id="editBtn">Edytuj paczkę</button>
     </div>
 
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
