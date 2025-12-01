@@ -5,143 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FastShip – Dodaj paczkę</title>
 
-    <link rel="stylesheet" href="../shared/sharedStyles.css" />
-    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../shared/sharedStyles.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body class="p-4">
-    <nav class="mb-4">
-      <a href="/index.html" class="me-3">Lista paczek</a>
-      <a href="/src/formpage/index.html">Dodaj paczkę</a>
+  <body>
+    <nav class="fs-navbar">
+      <div class="fs-navbar-left">
+        <a href="../../index.html" class="fs-logo">FastShip CRM</a>
+      </div>
+
+      <div class="fs-navbar-right">
+        <a href="../../index.html" class="fs-nav-btn">Lista paczek</a>
+        <a href="../formPage/index.html" class="fs-nav-btn">Dodaj paczkę</a>
+      </div>
     </nav>
 
-    <h1 class="mb-4">Dodaj nową paczkę</h1>
+    <div class="m-2 m-xl-4">
+      <h1 class="mb-4">Dodaj nową paczkę</h1>
 
-    <div id="error-box" class="alert alert-danger d-none"></div>
+      <div id="error-box" class="alert alert-danger d-none"></div>
 
-    <form id="package-form" class="border rounded p-4 bg-light">
-      <h4>Nadawca</h4>
+      <div class="container mt-4">
+        <div class="fs-form-wrapper">
+          <form id="package-form" class="border rounded p-1 p-xl-4 bg-light">
+            <h4>Nadawca</h4>
 
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Imię i nazwisko</label>
-          <input type="text" id="sender-name" class="form-control" required />
-        </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Imię i nazwisko</label>
+                <input
+                  type="text"
+                  id="sender-name"
+                  class="form-control"
+                  required
+                />
+              </div>
 
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Ulica</label>
-          <input type="text" id="sender-street" class="form-control" required />
-        </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Ulica</label>
+                <input
+                  type="text"
+                  id="sender-street"
+                  class="form-control"
+                  required
+                />
+              </div>
 
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Miasto</label>
-          <input type="text" id="sender-city" class="form-control" required />
-        </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Miasto</label>
+                <input
+                  type="text"
+                  id="sender-city"
+                  class="form-control"
+                  required
+                />
+              </div>
 
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Kod pocztowy</label>
-          <input type="text" id="sender-zip" class="form-control" required />
-        </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Kod pocztowy</label>
+                <input
+                  type="text"
+                  id="sender-zip"
+                  class="form-control"
+                  required
+                />
+              </div>
 
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Kraj</label>
-          <input
-            type="text"
-            id="sender-country"
-            class="form-control"
-            required
-          />
-        </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Kraj</label>
+                <input
+                  type="text"
+                  id="sender-country"
+                  class="form-control"
+                  required
+                />
+              </div>
 
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" id="sender-email" class="form-control" />
-        </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" id="sender-email" class="form-control" />
+              </div>
 
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Telefon</label>
-          <input type="text" id="sender-phone" class="form-control" />
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Telefon</label>
+                <input type="text" id="sender-phone" class="form-control" />
+              </div>
+            </div>
+
+            <h4 class="mt-4">Odbiorca</h4>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Imię i nazwisko</label>
+                <input
+                  type="text"
+                  id="receiver-name"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Ulica</label>
+                <input
+                  type="text"
+                  id="receiver-street"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Miasto</label>
+                <input
+                  type="text"
+                  id="receiver-city"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Kod pocztowy</label>
+                <input
+                  type="text"
+                  id="receiver-zip"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Kraj</label>
+                <input
+                  type="text"
+                  id="receiver-country"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" id="receiver-email" class="form-control" />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Telefon</label>
+                <input type="text" id="receiver-phone" class="form-control" />
+              </div>
+            </div>
+
+            <h4 class="mt-4">Szczegóły paczki</h4>
+
+            <div class="mb-3">
+              <label class="form-label">Priorytet</label>
+              <select id="priority" class="form-select">
+                <option value="standard">Standard</option>
+                <option value="express">Express</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Waga (kg)</label>
+              <input
+                type="number"
+                step="0.1"
+                min="0.1"
+                id="weight"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <button class="btn btn-primary" type="submit">Dodaj paczkę</button>
+            <a href="../../index.html" class="btn btn-secondary ms-2">Wróć</a>
+          </form>
         </div>
       </div>
-
-      <h4 class="mt-4">Odbiorca</h4>
-
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Imię i nazwisko</label>
-          <input type="text" id="receiver-name" class="form-control" required />
-        </div>
-
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Ulica</label>
-          <input
-            type="text"
-            id="receiver-street"
-            class="form-control"
-            required
-          />
-        </div>
-
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Miasto</label>
-          <input type="text" id="receiver-city" class="form-control" required />
-        </div>
-
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Kod pocztowy</label>
-          <input type="text" id="receiver-zip" class="form-control" required />
-        </div>
-
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Kraj</label>
-          <input
-            type="text"
-            id="receiver-country"
-            class="form-control"
-            required
-          />
-        </div>
-
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" id="receiver-email" class="form-control" />
-        </div>
-
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Telefon</label>
-          <input type="text" id="receiver-phone" class="form-control" />
-        </div>
-      </div>
-
-      <h4 class="mt-4">Szczegóły paczki</h4>
-
-      <div class="mb-3">
-        <label class="form-label">Priorytet</label>
-        <select id="priority" class="form-select">
-          <option value="standard">Standard</option>
-          <option value="express">Express</option>
-        </select>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label">Waga (kg)</label>
-        <input
-          type="number"
-          step="0.1"
-          min="0.1"
-          id="weight"
-          class="form-control"
-          required
-        />
-      </div>
-
-      <button class="btn btn-primary" type="submit">Dodaj paczkę</button>
-      <a href="../index.html" class="btn btn-secondary ms-2">Wróć</a>
-    </form>
+    </div>
 
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./index.js" type="module"></script>

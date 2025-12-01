@@ -14,7 +14,7 @@ if (!tableBody || !errorBox || !loader) {
 }
 
 function personToString(sender: PersonData): string {
-  return `${sender.name}, ${sender.address.street}, \n ${sender.address.zipCode} ${sender.address.city}`
+  return `${sender.name}`
 }
 
 async function loadPackages() {
@@ -40,20 +40,27 @@ async function loadPackages() {
           <td>${pkg.weight} kg</td>
           <td>${pkg.status}</td>
           <td>${new Date(pkg.createdAt).toLocaleString()}</td>
-          <td>
-            <a href="/src/detailsPage/index.html?id=${encodeURIComponent(
+          <td class="buttons-container">
+            <button href="/src/detailsPage/index.html?id=${encodeURIComponent(
               pkg.id
-            )}" class="btn btn-sm btn-primary me-1">Szczegóły</a>
-            <button class="btn btn-sm btn-secondary me-1 edit-btn" data-id="${
+            )}" class="btn btn-sm btn-primary action-btn me-1 details-btn">Szczegóły</button>
+            <button class="btn btn-sm btn-secondary action-btn me-1 edit-btn" data-id="${
               pkg.id
             }">Edytuj</button>
-            <button class="btn btn-sm btn-danger delete-btn" data-id="${
+            <button class="btn btn-sm btn-danger action-btn delete-btn" data-id="${
               pkg.id
             }">Usuń</button>
           </td>
         `
         tableBody.appendChild(row)
       })
+
+      tableBody
+        .querySelector(".details-btn")
+        ?.addEventListener("click", (ev) => {
+          window.location.href =
+            (ev.currentTarget as HTMLButtonElement).getAttribute("href") || "/"
+        })
 
       tableBody.querySelectorAll(".delete-btn").forEach((btn) => {
         btn.addEventListener("click", async (ev) => {

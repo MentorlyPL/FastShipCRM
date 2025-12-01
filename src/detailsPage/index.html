@@ -5,30 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FastShip CRM - Szczegóły paczki</title>
 
-    <link rel="stylesheet" href="../shared/sharedStyles.css" />
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../shared/sharedStyles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../shared/editModal/editModal.css" />
   </head>
-  <body class="p-4">
-    <nav class="mb-4">
-      <a href="../../index.html" class="me-3">Lista paczek</a>
-      <a href="../formPage/index.html" class="me-3">Dodaj paczkę</a>
-    </nav>
-
-    <h1>Szczegóły paczki</h1>
-
-    <div class="container mt-4">
-      <button class="btn btn-secondary mb-3" id="backBtn">← Powrót</button>
-      <h2 class="mb-4">Szczegóły paczki</h2>
-
-      <div id="detailsContainer" class="card p-4 shadow-sm">
-        Ładowanie danych...
+  <body>
+    <nav class="fs-navbar">
+      <div class="fs-navbar-left">
+        <a href="../../index.html" class="fs-logo">FastShip CRM</a>
       </div>
 
-      <button class="btn btn-primary mt-4" id="editBtn">Edytuj paczkę</button>
+      <div class="fs-navbar-right">
+        <a href="../../index.html" class="fs-nav-btn">Lista paczek</a>
+        <a href="../formPage/index.html" class="fs-nav-btn">Dodaj paczkę</a>
+      </div>
+    </nav>
+
+    <div class="m-2 m-xl-4">
+      <div class="container mt-4">
+        <button class="btn btn-secondary mb-3" id="backBtn">← Powrót</button>
+        <h2 class="mb-4">Szczegóły paczki</h2>
+
+        <div id="detailsContainer" class="card p-4 shadow-sm">
+          Ładowanie danych...
+        </div>
+
+        <button class="btn btn-primary mt-4" id="editBtn">Edytuj paczkę</button>
+      </div>
     </div>
 
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
