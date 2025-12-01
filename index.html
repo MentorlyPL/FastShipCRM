@@ -30,6 +30,49 @@
 
       <h2 class="mb-3">Lista paczek</h2>
 
+      <div
+        class="filters-container d-flex justify-content-between align-items-end mb-4"
+      >
+        <div class="d-flex gap-3">
+          <div>
+            <label for="filterStatus" class="form-label fw-bold"
+              >Filtruj po statusie</label
+            >
+            <select id="filterStatus" class="form-select">
+              <option value="">Wszystkie</option>
+              <option value="created">created</option>
+              <option value="collected">collected</option>
+              <option value="inTransit">inTransit</option>
+              <option value="forDelivery">forDelivery</option>
+              <option value="delivered">delivered</option>
+              <option value="cancelled">cancelled</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="filterPriority" class="form-label fw-bold"
+              >Filtruj po priorytecie</label
+            >
+            <select id="filterPriority" class="form-select">
+              <option value="">Wszystkie</option>
+              <option value="standard">standard</option>
+              <option value="express">express</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sort-container">
+          <label for="sortSelect" class="form-label fw-bold">Sortuj</label>
+          <select id="sortSelect" class="form-select">
+            <option value="">Domyślne</option>
+            <option value="dateAsc">Data nadania ↑</option>
+            <option value="dateDesc">Data nadania ↓</option>
+            <option value="weightAsc">Waga ↑</option>
+            <option value="weightDesc">Waga ↓</option>
+          </select>
+        </div>
+      </div>
+
       <div class="table-container">
         <div id="loader" style="display: none">
           <div class="spinner-border" role="status"></div>

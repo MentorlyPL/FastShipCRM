@@ -63,35 +63,300 @@
       "createdAt": "2025-12-01T10:14:14.026Z"
     },
     {
-      "id": "1b2c3d4e",
+      "id": "a1b2c3d4-e11a-44c0-bc11-111111111111",
       "sender": {
         "name": "Jan Kowalski",
         "address": {
-          "street": "Polna 12",
+          "street": "Długa 5",
           "city": "Warszawa",
           "zipCode": "00-001",
-          "country": "Polska"
+          "country": "Poland"
         },
         "contact": {
-          "email": "jan@example.com"
+          "email": "jan.kowalski@example.com"
         }
       },
       "receiver": {
-        "name": "Anna Nowak",
+        "name": "Adam Nowak",
         "address": {
-          "street": "Zielona 33",
+          "street": "Krótka 10",
           "city": "Kraków",
           "zipCode": "30-001",
-          "country": "Polska"
+          "country": "Poland"
         },
         "contact": {
-          "phone": "+48 555 333 222"
+          "phone": "+48123456789"
         }
       },
       "priority": "express",
-      "weight": 2.5,
+      "weight": 2.4,
+      "status": "inTransit",
+      "createdAt": "2025-01-10T10:30:00"
+    },
+    {
+      "id": "b2c3d4e5-e22a-55c1-bc22-222222222222",
+      "sender": {
+        "name": "Karol Zieliński",
+        "address": {
+          "street": "Zielona 18",
+          "city": "Wrocław",
+          "zipCode": "50-300",
+          "country": "Poland"
+        },
+        "contact": {
+          "email": "karol.z@example.com"
+        }
+      },
+      "receiver": {
+        "name": "Anna Kowalczyk",
+        "address": {
+          "street": "Lipowa 2",
+          "city": "Poznań",
+          "zipCode": "60-100",
+          "country": "Poland"
+        },
+        "contact": {
+          "email": "anna.k@example.com"
+        }
+      },
+      "priority": "standard",
+      "weight": 12,
       "status": "created",
-      "createdAt": "2024-05-01T12:00:00.000Z"
+      "createdAt": "2025-01-12T09:10:00"
+    },
+    {
+      "id": "c3d4e5f6-e33a-66c2-bc33-333333333333",
+      "sender": {
+        "name": "Marek Bąk",
+        "address": {
+          "street": "Słoneczna 45",
+          "city": "Gdańsk",
+          "zipCode": "80-120",
+          "country": "Poland"
+        },
+        "contact": {
+          "phone": "+48550111222"
+        }
+      },
+      "receiver": {
+        "name": "Paweł Król",
+        "address": {
+          "street": "Różana 7",
+          "city": "Łódź",
+          "zipCode": "90-200",
+          "country": "Poland"
+        },
+        "contact": {
+          "email": "pawel.k@example.com"
+        }
+      },
+      "priority": "express",
+      "weight": 5.8,
+      "status": "collected",
+      "createdAt": "2025-01-09T14:00:00"
+    },
+    {
+      "id": "d4e5f6g7-e44a-77c3-bc44-444444444444",
+      "sender": {
+        "name": "Natalia Nowicka",
+        "address": {
+          "street": "Lawendowa 13",
+          "city": "Kielce",
+          "zipCode": "25-300",
+          "country": "Poland"
+        },
+        "contact": {
+          "email": "n.nowicka@example.com"
+        }
+      },
+      "receiver": {
+        "name": "Ola Bielska",
+        "address": {
+          "street": "Leśna 9",
+          "city": "Bydgoszcz",
+          "zipCode": "85-001",
+          "country": "Poland"
+        },
+        "contact": {}
+      },
+      "priority": "standard",
+      "weight": 3.2,
+      "status": "forDelivery",
+      "createdAt": "2025-01-08T16:45:00"
+    },
+    {
+      "id": "e5f6g7h8-e55a-88c4-bc55-555555555555",
+      "sender": {
+        "name": "Piotr Cichy",
+        "address": {
+          "street": "Kwiatowa 21",
+          "city": "Rzeszów",
+          "zipCode": "35-100",
+          "country": "Poland"
+        },
+        "contact": {
+          "email": "piotr.c@example.com"
+        }
+      },
+      "receiver": {
+        "name": "Monika Pawlak",
+        "address": {
+          "street": "Szkolna 3",
+          "city": "Opole",
+          "zipCode": "45-050",
+          "country": "Poland"
+        },
+        "contact": {
+          "phone": "+48700100100"
+        }
+      },
+      "priority": "express",
+      "weight": 9.7,
+      "status": "delivered",
+      "createdAt": "2025-01-02T12:00:00"
+    },
+    {
+      "id": "f6g7h8i9-e66a-99c5-bc66-666666666666",
+      "sender": {
+        "name": "Kinga Lis",
+        "address": {
+          "street": "Promienna 8",
+          "city": "Szczecin",
+          "zipCode": "70-020",
+          "country": "Poland"
+        },
+        "contact": {}
+      },
+      "receiver": {
+        "name": "Robert Mazur",
+        "address": {
+          "street": "Nowa 14",
+          "city": "Białystok",
+          "zipCode": "15-100",
+          "country": "Poland"
+        },
+        "contact": {}
+      },
+      "priority": "standard",
+      "weight": 1.2,
+      "status": "cancelled",
+      "createdAt": "2025-01-11T18:00:00"
+    },
+    {
+      "id": "g7h8i9j0-e77a-00c6-bc77-777777777777",
+      "sender": {
+        "name": "Tomasz Urban",
+        "address": {
+          "street": "Dzika 7",
+          "city": "Katowice",
+          "zipCode": "40-001",
+          "country": "Poland"
+        },
+        "contact": {
+          "email": "tomasz.u@example.com"
+        }
+      },
+      "receiver": {
+        "name": "Ewa Michalska",
+        "address": {
+          "street": "Wiosenna 2",
+          "city": "Olsztyn",
+          "zipCode": "10-500",
+          "country": "Poland"
+        },
+        "contact": {}
+      },
+      "priority": "express",
+      "weight": 7.3,
+      "status": "created",
+      "createdAt": "2025-01-14T08:25:00"
+    },
+    {
+      "id": "h8i9j0k1-e88a-11c7-bc88-888888888888",
+      "sender": {
+        "name": "Alicja Baran",
+        "address": {
+          "street": "Łąkowa 9",
+          "city": "Torun",
+          "zipCode": "87-100",
+          "country": "Poland"
+        },
+        "contact": {}
+      },
+      "receiver": {
+        "name": "Marta Szulc",
+        "address": {
+          "street": "Klonowa 11",
+          "city": "Słupsk",
+          "zipCode": "76-200",
+          "country": "Poland"
+        },
+        "contact": {
+          "email": "m.szulc@example.com"
+        }
+      },
+      "priority": "standard",
+      "weight": 4.9,
+      "status": "collected",
+      "createdAt": "2025-01-03T11:00:00"
+    },
+    {
+      "id": "i9j0k1l2-e99a-22c8-bc99-999999999999",
+      "sender": {
+        "name": "Damian Kowalczyk",
+        "address": {
+          "street": "Kościelna 4",
+          "city": "Radom",
+          "zipCode": "26-600",
+          "country": "Poland"
+        },
+        "contact": {
+          "phone": "+48500200300"
+        }
+      },
+      "receiver": {
+        "name": "Sylwia Kurek",
+        "address": {
+          "street": "Słoneczna 20",
+          "city": "Gdynia",
+          "zipCode": "81-300",
+          "country": "Poland"
+        },
+        "contact": {}
+      },
+      "priority": "express",
+      "weight": 15.2,
+      "status": "inTransit",
+      "createdAt": "2025-01-06T15:45:00"
+    },
+    {
+      "id": "j0k1l2m3-e00a-33c9-bc00-000000000000",
+      "sender": {
+        "name": "Eliza Chmura",
+        "address": {
+          "street": "Perłowa 15",
+          "city": "Zielona Góra",
+          "zipCode": "65-001",
+          "country": "Poland"
+        },
+        "contact": {
+          "email": "eliza.c@example.com"
+        }
+      },
+      "receiver": {
+        "name": "Jakub Sobczak",
+        "address": {
+          "street": "Morelowa 8",
+          "city": "Suwałki",
+          "zipCode": "16-400",
+          "country": "Poland"
+        },
+        "contact": {}
+      },
+      "priority": "standard",
+      "weight": 6.3,
+      "status": "delivered",
+      "createdAt": "2025-01-04T09:50:00"
     }
   ]
 }
